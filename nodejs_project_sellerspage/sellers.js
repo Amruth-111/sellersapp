@@ -46,16 +46,15 @@ let parentNode = userlist2;
 }     
 
 //deleting 
-function deleteProduct(key,show){
-        console.log(show)
-        axios.delete(`http://localhost:4500/delete-details/${key}`).then((res)=>{
-        console.log("entered delete dom")
+async function deleteProduct(key,show){
+        try{
         removeScreen(key)
-        
-        }).catch((e)=>{
+        await axios.delete(`http://localhost:4500/delete-details/${key}`)
+        console.log("entered delete dom")
+        }catch(e){
             console.log(e)
             console.log("error in delete dom")
-        })
+        }
 
     function removeScreen(key){
         let parent=userlist1;
@@ -72,7 +71,6 @@ function deleteProduct(key,show){
             parent.removeChild(child)
             }
         }
-        
 }
 
 //submitting the data
