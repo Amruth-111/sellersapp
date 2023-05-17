@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_project_sellerspage",
+  "version": "1.0.0",
+  "description": "nodejs sellers page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "author": "Amruth",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-browserify": "^1.7.0",
+    "mysql2": "^3.3.1",
+    "router": "^1.3.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.1"
+  }
+}
